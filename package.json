@@ -17,8 +17,12 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack",
     "start": "node host.js",
-    "test": "npm run test:js",
-    "test:js": ""
+    "test": "npm run lint",
+    "test:js": "",
+    "lint": "npm run lint:js && npm run lint:jsx && npm run lint:style",
+    "lint:js": "eslint ./ui",
+    "lint:jsx": "eslint --config ./.eslintrc.jsx.json ./ui/**/*.jsx",
+    "lint:style": "sass-lint './ui/style/**/*.scss' -v -q"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
@@ -48,7 +52,11 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-plugin-module-alias": "^1.6.0",
+    "babel-eslint": "^7.2.3",
     "ejs": "^2.5.6",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-react": "^7.0.1",
     "express": "^4.15.2"
   }
 }

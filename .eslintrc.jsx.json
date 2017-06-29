@@ -38,7 +38,7 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "require-jsdoc": 0,
-    "semi": [ "error", "never" ],
+    "semi": [ "error", "always" ],
     "strict": 0,
     "template-curly-spacing": [ "error", "never" ],
     "valid-jsdoc": "error",
