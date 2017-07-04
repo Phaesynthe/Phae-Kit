@@ -16,6 +16,7 @@
   },
   "extends": "google",
   "rules": {
+    "array-bracket-spacing": [ "error", "always", { "singleValue": false } ],
     "constructor-super": "warn",
     "comma-dangle": [ "error", "never" ],
     "curly": 0,
