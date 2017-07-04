@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import ButtonBase from './base/buttonBase.jsx'
+import ButtonBase from './base/buttonBase.jsx';
 
-require('Style/component/button/buttonAction.scss');
+import 'Style/component/button/buttonAction.scss';
 
 class ButtonAction extends Component {
   getClasses() {
     // Functionally white-list each button type and restrict to only allow
     // the action button to be of one type.
-    let cssClasses = [ 'action' ];
+    let cssClasses = ['action'];
     if (this.props.primary) {
       cssClasses.push( 'primary');
     } else if (this.props.secondary) {
       cssClasses.push( 'secondary');
     }
-    return cssClasses.join(' ')
+    return cssClasses.join(' ');
   }
 
   render() {

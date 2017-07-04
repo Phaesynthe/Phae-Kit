@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import ButtonBase from './base/buttonBase.jsx'
+import ButtonBase from './base/buttonBase.jsx';
 
 require('Style/component/button/buttonNav.scss');
 
