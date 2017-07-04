@@ -13,9 +13,12 @@
     "node": "8.x",
     "npm": "4.x"
   },
-  "os" : [ "!win32" ],
+  "os": [
+    "!win32"
+  ],
   "scripts": {
     "build": "./node_modules/.bin/webpack",
+    "build:watch": "./node_modules/.bin/webpack --watch",
     "start": "node host.js",
     "test": "npm run lint",
     "test:js": "",
