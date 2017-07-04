@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import 'Style/component/button/base.scss';
 
@@ -10,9 +10,10 @@ class ButtonsBase extends Component {
   }
 
   // Pull any passed in class out of the instance and return it
-  getClass() {
+  getClasses() {
     return [ 'base', (this.props.className || '') ].join(' ');
   }
+
   handleClick(ev) {
     if (typeof this.props.onClick === 'function') {
       // Fist, block the event from bubbling up
@@ -21,17 +22,17 @@ class ButtonsBase extends Component {
       this.props.onClick.call(ev);
     }
   }
-  render() {
 
+  render() {
     return (
       <button
-          className={ this.getClass() }
+          className={ this.getClasses() }
           onTouchTap={ this.handleClick }
           type={ this.props.type || 'submit' }
       >
         { this.props.children }
       </button>
-    )
+    );
   }
 }
 
