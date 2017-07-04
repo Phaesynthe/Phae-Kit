@@ -1,0 +1,61 @@
+div.story-node {
+  display: flex;
+  outline: 1px solid black;
+  width: 100%;
+
+  .node-tracking-details {
+    outline: 1px solid green;
+    max-width: 200px;
+  }
+
+  .node-main-block {
+    outline: 1px solid blue;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex: 1;
+  }
+
+  .transition-bank {
+    position: relative; // Needed as an anchor point
+
+    .column-toggle {
+      position: absolute;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    .icon-add {
+      left: 0;
+      position: absolute;
+      transform: translateY(50%);
+    }
+  }
+
+  // Manage the collapsed state separate from other concerns
+  .transition-bank:not(.expanded) .transition-detail {
+    display: inline-flex;
+    width: 25%;
+
+    .control-bank, .control-wrapper {
+      // We avoid manipulating display so the transition can be animated
+      overflow: hidden;
+      width: 0;
+    }
+  }
+
+  .transitions {
+    padding-top: 16px;
+  }
+
+  .transition-detail {
+    display: flex;
+
+    &.selected {
+      background-color: #9fcbd2;
+    }
+
+    .transition-text {
+      flex-grow: 1;
+    }
+  }
+}

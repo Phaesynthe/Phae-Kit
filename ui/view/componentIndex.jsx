@@ -3,15 +3,20 @@
 import React, { Component } from 'react';
 
 // Components
-import ButtonAction from 'Component/inputs/buttonAction.jsx';
+import ButtonAction from 'Component/input/buttonAction.jsx';
+import ButtonNav from 'Component/input/buttonNav.jsx';
 
-import ButtonNav from 'Component/inputs/buttonNav.jsx';
+import Toggle from 'Component/input/toggle.jsx';
 
-class Dashboard extends Component {
+import IconConfigure from 'Component/icon/configure.jsx';
+
+class ComponentIndex extends Component {
   render() {
     return (
       <div className='view-component-index'>
         <h1>Component Index</h1>
+
+        <h2>Controls</h2>
         <ButtonAction>normal Action Button</ButtonAction> <br />
         <ButtonAction primary>Primary Action Button</ButtonAction> <br />
         <ButtonAction secondary>Secondary Action Button</ButtonAction> <br />
@@ -19,9 +24,19 @@ class Dashboard extends Component {
         <br />
 
         <ButtonNav>Nav</ButtonNav> <br />
+
+        <h2>Inputs</h2>
+        <Toggle />
+
+        <h2>Icons</h2>
+        <IconConfigure />
+        <IconConfigure small />
+        <IconConfigure large />
+        <IconConfigure xsmall />
+        <IconConfigure outlined />
       </div>
     );
   }
 }
 
-export default Dashboard;
+export default ComponentIndex;

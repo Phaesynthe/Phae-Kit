@@ -23,3 +23,7 @@ Most components will wrap a base component. The base component is intended to of
 - `services`: These are standard JS files that provide some processing assistance or access into external systems like HTTP request and local browser storage.
 - `styles`: contains all of the SCSS style information required by the application and components.
 - `views`: represents the complete pages. This is the highest level within the application and uses URI based routing over state based routing.
+
+
+## SVG Assets ##
+All included SVG assets should be run through an optimizer like the one at `https://simon.html5.org/tools/js/svg-optimizer/`, and use a uniform viewport size.
