@@ -1,0 +1,86 @@
+.input-base {
+  display: inline-block;
+  padding-left: 8px;
+  position: relative;
+
+  label {
+    font-size: 18px;
+  }
+
+  .overlay {
+    bottom: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .wrapper {
+    display: inline-block;
+    height: 100%;
+  }
+
+  input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid cyan;
+    margin-top: 14px;
+  }
+
+  .prompt-message {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+
+  .error-message {
+    bottom: 0;
+    color: red;
+    display: none;
+    font-size: 14px;
+    max-width: 100%;
+    overflow: hidden;
+    text-wrap: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.submitting {
+    .overlay {
+      background-color: black;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-bottom-color: red;
+    }
+    .error-message {
+      display: block;
+    }
+  }
+
+  &.disabled {
+    input {
+      border-bottom-color: grey;
+    }
+  }
+
+  &.required {
+    label:before {
+      background-color: red;
+      border-radius: 16px;
+      content: '';
+      height: 4px;
+      left: 4px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+    }
+  }
+}
