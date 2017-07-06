@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 
 // Components
-import ButtonAction from 'Component/input/buttonAction.jsx';
-import ButtonNav from 'Component/input/buttonNav.jsx';
+import ButtonAction from 'Component/control/buttonAction.jsx';
+import ButtonNav from 'Component/control/buttonNav.jsx';
 
 import Toggle from 'Component/input/toggle.jsx';
 

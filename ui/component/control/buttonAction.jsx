@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 import ButtonBase from './base/buttonBase.jsx';
 
-import 'Style/component/button/buttonAction.scss';
+import 'Style/component/control/button/buttonAction.scss';
 
 class ButtonAction extends Component {
+  constructor(props) {
+    super(props);
+
+    this.getClasses = this.getClasses.bind(this);
+  }
+
   getClasses() {
     // Functionally white-list each button type and restrict to only allow
     // the action button to be of one type.

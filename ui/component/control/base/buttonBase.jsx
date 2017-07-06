@@ -6,7 +6,7 @@ class ButtonsBase extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.getClass = this.getClass.bind(this);
+    this.getClasses = this.getClasses.bind(this);
   }
 
   // Pull any passed in class out of the instance and return it
@@ -27,7 +27,7 @@ class ButtonsBase extends Component {
     return (
       <button
           className={ this.getClasses() }
-          onTouchTap={ this.handleClick }
+          onClick={ this.handleClick }
           type={ this.props.type || 'submit' }
       >
         { this.props.children }

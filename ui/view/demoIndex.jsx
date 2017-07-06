@@ -11,6 +11,7 @@ class DemoIndex extends Component {
         <h1>Demo Index</h1>
         <Link className='interior-link' to='/StoryPartials'>Story Partials</Link><br />
         <Link className='interior-link' to='/ComponentIndex'>Component Index</Link><br />
+        <Link className='interior-link' to='/InputIndex'>Input Index</Link><br />
       </div>
     );
   }

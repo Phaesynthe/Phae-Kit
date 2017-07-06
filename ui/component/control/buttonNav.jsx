@@ -5,6 +5,11 @@ import ButtonBase from './base/buttonBase.jsx';
 require('Style/component/button/buttonNav.scss');
 
 class ButtonAction extends Component {
+  constructor(props) {
+    super(props);
+    this.getClasses = this.getClasses.bind(this);
+  }
+
   getClasses() {
     return 'nav';
   }

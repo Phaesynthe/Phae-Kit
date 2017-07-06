@@ -10,6 +10,7 @@ const browserHistory = useRouterHistory(createHistory)({
 
 // Views
 import ComponentIndex from 'View/componentIndex.jsx';
+import InputIndex from 'View/inputIndex.jsx';
 import DemoIndex from 'View/demoIndex.jsx';
 import StroyPartials from 'View/storyPartials.jsx';
 
@@ -25,6 +26,7 @@ render((
   <Router onUpdate={ () => window.scrollTo(0, 0) } history={ browserHistory }>
     <Route path='/' component={ DemoIndex } />
     <Route path='/ComponentIndex' component={ ComponentIndex } />
+    <Route path='/InputIndex' component={ InputIndex } />
     <Route path='/StoryPartials' component={ StroyPartials } />
   </Router>
 ),
