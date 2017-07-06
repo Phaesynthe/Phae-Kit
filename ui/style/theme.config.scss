@@ -1,3 +1,5 @@
+// sass-lint:disable no-color-keywords
+
 // ----- ----- ----- ----- //
 // -----   Layout    ----- //
 // ----- ----- ----- ----- //
@@ -19,7 +21,14 @@ $theme-colors: (
     border-error: ( red, 300 ),
     back-shadow: ( blue, 900 ),
     back-shadow-error: ( red, 900 ),
-    foreground: ( white, 100 )
+    foreground: ( white, 100 ),
+    selected-background: ( cyan, 100 )
+  ),
+  field: (
+    border: ( grey, 400 ),
+    error: ( red, 300 ),
+    overlay: ( grey, 900 ),
+    required: ( red, 300 )
   )
 );
 

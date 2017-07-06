@@ -1,11 +1,11 @@
 button.action {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
 
   &.primary {
-    color: red;
+    color: #f00;
   }
   &.secondary {
-    color: green;
+    color: #0f0;
   }
 }

@@ -5,25 +5,27 @@ button.toggle {
   $med: 32;
   $lg: 64;
 
-  background: none;
-  border: none;
+  background: 0;
+  border: 0;
   padding: 0;
   text-align: center;
 
   &:focus {
-    outline: none;
+    outline: 0;
   }
 
   &.x-small svg {
-    height: $xs + unquote("px");
-    width: $xs + unquote("px");
+    height: $xs + unquote('px');
+    width: $xs + unquote('px');
   }
+
   &.small svg {
-    height: $sm + unquote("px");
-    width: $sm + unquote("px");
+    height: $sm + unquote('px');
+    width: $sm + unquote('px');
   }
+
   &.large svg {
-    height: $lg + unquote("px");
-    width: $lg + unquote("px");
+    height: $lg + unquote('px');
+    width: $lg + unquote('px');
   }
 }

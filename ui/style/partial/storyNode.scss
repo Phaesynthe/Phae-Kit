@@ -1,18 +1,17 @@
+@import '../imports';
+
 div.story-node {
   display: flex;
-  outline: 1px solid black;
   width: 100%;
 
   .node-tracking-details {
-    outline: 1px solid green;
     max-width: 200px;
   }
 
   .node-main-block {
-    outline: 1px solid blue;
+    flex: 1;
     padding-left: 16px;
     padding-right: 16px;
-    flex: 1;
   }
 
   .transition-bank {
@@ -36,7 +35,8 @@ div.story-node {
     display: inline-flex;
     width: 25%;
 
-    .control-bank, .control-wrapper {
+    .control-bank,
+    .control-wrapper {
       // We avoid manipulating display so the transition can be animated
       overflow: hidden;
       width: 0;
@@ -51,7 +51,7 @@ div.story-node {
     display: flex;
 
     &.selected {
-      background-color: #9fcbd2;
+      background-color: color(container, background);
     }
 
     .transition-text {

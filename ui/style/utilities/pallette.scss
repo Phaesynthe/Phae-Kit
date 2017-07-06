@@ -11,8 +11,8 @@
 
 @function color($area, $use) {
   $color-description-list: map-get(
-      map-get($theme-colors, $area),
-      $use
+    map-get($theme-colors, $area),
+    $use
   );
 
   $color-palette-name: nth($color-description-list, 1);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ButtonBase from './base/buttonBase.jsx';
 
-require('Style/component/button/buttonNav.scss');
+require('Style/component/control/button/buttonNav.scss');
 
 class ButtonAction extends Component {
   constructor(props) {

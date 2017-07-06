@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 
 // Components
-import StoryNode from 'Partial/storyNode/storyNode.jsx'
+import StoryNode from 'Partial/storyNode/storyNode.jsx';
 
 class StoryPartials extends Component {
   render() {
