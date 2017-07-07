@@ -1,0 +1,23 @@
+.duration-clock {
+  svg {
+    width: 256px;
+
+    .timer-hand {
+      stroke: red;
+      stroke-width: 2px;
+      transform-origin: 50% 100%;
+      // The initial `transform: rotate(#deg);` must be applied at draw time
+      // This allows the timer to look like it has been running we reloaded
+    }
+
+    .tick {
+      stroke: black;
+      stroke-width: 4px;
+      transform-origin: 50% 1000%;
+    }
+  }
+
+  &.started svg .timer-hand {
+    transform: rotate(0deg);
+  }
+}
