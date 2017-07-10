@@ -10,7 +10,25 @@ import Toggle from 'Component/input/toggle.jsx';
 
 import IconConfigure from 'Component/icon/configure.jsx';
 
+import DurationClock from 'Component/indicator/durationClock.jsx';
+
 class ComponentIndex extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clockConfig1: {
+        startedAt: new Date(new Date() - ( 60 * 20 * 1000 )),
+        duration: ( 60 * 25 )
+      }
+    };
+
+    this.startTimer = this.startTimer.bind(this);
+  }
+  startTimer() {
+    this.setState({
+      timer1Running: true
+    });
+  }
   render() {
     return (
       <div className='view-component-index'>
@@ -34,6 +52,11 @@ class ComponentIndex extends Component {
         <IconConfigure large />
         <IconConfigure xsmall />
         <IconConfigure outlined />
+
+        <h2>Indicators</h2>
+        <DurationClock config={ this.state.clockConfig1 } running={ this.state.timer1Running }/>
+        <button onClick={ this.startTimer }>Run Clock</button>
+
       </div>
     );
   }

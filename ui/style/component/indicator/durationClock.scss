@@ -3,11 +3,19 @@
     width: 256px;
 
     .timer-hand {
-      stroke: red;
-      stroke-width: 2px;
       transform-origin: 50% 100%;
       // The initial `transform: rotate(#deg);` must be applied at draw time
       // This allows the timer to look like it has been running we reloaded
+    }
+
+    .second-hand {
+      stroke: red;
+      stroke-width: 2px;
+    }
+
+    .minute-hand {
+      stroke: blue;
+      stroke-width: 4px;
     }
 
     .tick {
