@@ -18,7 +18,6 @@ class DurationClock extends Component {
     super(props);
     this.state = Object.assign({ id: 'test' }, props.config);
 
-    this.getStyleHourHand = this.getStyleHourHand.bind(this);
     this.getStyleMinuteHand = this.getStyleMinuteHand.bind(this);
     this.getStyleSecondHand = this.getStyleSecondHand.bind(this);
     this.startClock = this.startClock.bind(this);
@@ -69,9 +68,12 @@ class DurationClock extends Component {
     let remaining = this.state.duration;
 
     if (this.state.startedAt) {
-      remaining = Math.round((new Date() - this.state.startedAt));
+      remaining = Math.round(
+        remaining - ((new Date() - this.state.startedAt) / 1000)  // how many seconds
+      );
     }
-    deg = (this.state.duration - (this.state.duration - remaining)) / (60) * 360;
+    // (total time - (total tile - elapsed time)) over 60 minutes
+    deg = (this.state.duration - (this.state.duration - (remaining))) / 60 * 360;
 
     return {
       transform: `rotate(${deg}deg)`,

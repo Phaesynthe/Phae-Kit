@@ -29,6 +29,11 @@ $theme-colors: (
     error: ( red, 300 ),
     overlay: ( grey, 900 ),
     required: ( red, 300 )
+  ),
+  timer: (
+    face-line: ( black, 100 ),
+    second-hand: ( red, 300 ),
+    minute-hand: ( blue, 600)
   )
 );
 
