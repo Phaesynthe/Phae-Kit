@@ -12,6 +12,7 @@ class DemoIndex extends Component {
         <Link className='interior-link' to='/StoryPartials'>Story Partials</Link><br />
         <Link className='interior-link' to='/ComponentIndex'>Component Index</Link><br />
         <Link className='interior-link' to='/InputIndex'>Input Index</Link><br />
+        <Link className='interior-link' to='/LayoutIndex'>Layout Index</Link><br />
       </div>
     );
   }

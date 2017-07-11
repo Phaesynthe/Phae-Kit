@@ -4,10 +4,12 @@
 @import 'theme.config';
 
 // Functions
-@import './utilities/pallette';
+@import './utilities/breakpoint';
 @import './utilities/maps';
+@import './utilities/pallette';
 
 // Mixins
+@import './mixins/breakpoint';
 @import './mixins/typography';
 @import './mixins/visibility';
 

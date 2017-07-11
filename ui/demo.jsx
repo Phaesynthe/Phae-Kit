@@ -12,22 +12,21 @@ const browserHistory = useRouterHistory(createHistory)({
 import ComponentIndex from 'View/componentIndex.jsx';
 import InputIndex from 'View/inputIndex.jsx';
 import DemoIndex from 'View/demoIndex.jsx';
-import StroyPartials from 'View/storyPartials.jsx';
+import LayoutIndex from 'View/layoutIndex.jsx';
+import StoryPartials from 'View/storyPartials.jsx';
 
 // Styles
 import 'Style/global.scss';
 
 // import { useRouterHistory } from 'react-router';
 
-
-
-
 render((
   <Router onUpdate={ () => window.scrollTo(0, 0) } history={ browserHistory }>
     <Route path='/' component={ DemoIndex } />
     <Route path='/ComponentIndex' component={ ComponentIndex } />
     <Route path='/InputIndex' component={ InputIndex } />
-    <Route path='/StoryPartials' component={ StroyPartials } />
+    <Route path='/LayoutIndex' component={ LayoutIndex } />
+    <Route path='/StoryPartials' component={ StoryPartials } />
   </Router>
 ),
 document.querySelector('#application'));
