@@ -17,4 +17,10 @@
       @content;
     }
   }
+  @else {
+    // Functionally the same as 'up'
+    @media screen and (min-width: breakpoint-size($bpName)) {
+      @content;
+    }
+  }
 }
