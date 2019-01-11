@@ -1,4 +1,2 @@
 # Phae Kit #
-This Repo is Deprecated:
-
-Source Tracking moved to BitBucket.
+This Repo is Deprecated. Retaining for pattern reference
